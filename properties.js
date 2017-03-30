@@ -4,7 +4,7 @@ document.getElementById("input1").style.display="none";
 document.getElementById("output1").style.display="block";
 
 var page = getParameterByName('page');
-var uri="http://localhost:8080/properties"
+var uri="http://192.168.0.16:8080/properties"
 var symbol="?"
 if(document.getElementById('propertyNameId').value!=""){
    uri=uri+symbol+"propertyName="+(document.getElementById('propertyNameId').value)
