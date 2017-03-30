@@ -1,23 +1,81 @@
----
-layout: default
----
+<html>
+<head>
+	<script type="text/javascript" src="properties.js"></script>
+        <script type="text/javascript" src="data.json"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/
+jquery.min.js"></script>
+        <script src="hello.js"></script>
+      <script src="jquery.dynatable.js"></script>
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/jquery.dynatable.css" />
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/reset.css" />
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/bootstrap-2.3.2.min.css" />
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/application.css" />
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/project.css" />
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/pygments.css" />
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/share.css" />
+    <link href='//fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/dynatable-docs.css" />
+    <link rel="stylesheet" type="text/css"  href="dropdown.css" />
 
-<div class="home">
+</head>
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<body>
+<div id="input1">
+<h1>Find your dream property</h1>
+<p>Please enter filter criteria : </p>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<!--<div class="dropdown">
+  <br>
+   Property Type: <br>
+  <button onclick="myFunction()" id="dropBtnId" class="dropbtn"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#Apartment">Apartment</a>
+    <a href="#Villa">Villa</a>
+  </div>
+</div>-->
+<form action='javascript:UserAction()'>
+ Property Name: <br>
+<input type="text" id="propertyNameId" name="Property Name">
+<br>
+Property Price: <br>
+<input type="text" id="propertyPriceId" name="Property Price">
+<br>
+Property Size: <br>
+<input type="text" id="propertySizeId" name="Property Size">
+<br>
+Property Type: <br>
+<input type="text" id="propertyTypeId" name="Property Type">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<br>
+Property Area: <br>
+<input type="text" id="propertyAreaId" name="Property Area">
+<br>
+<input type="submit" name="Search">
+</form>
 </div>
+<div hidden id="output1">
+<table id="table1" class="table table-striped" border="1" cellpadding="2">
+  <thead>
+        <th>Property Name</th>
+        <th>Property Address</th>
+        <th>Property Price</th>
+        <th>Property Size</th>
+        <th>Property Type</th>
+        <th>Property Area</th>
+        <th>Owner Name</th>
+        <th>Owner Email</th>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<button onclick="goBack()">Go Back</button>
+</div>
+<script>
+$(document).ready(function(){
+    $('#table1').dataTable();
+});
+</script>
+</body>
+</html>
