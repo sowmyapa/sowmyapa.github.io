@@ -51,7 +51,7 @@ totalRecordCount: 'totalRecordCount'
 }
 
 function goBack(){
-     window.location = "file:///Users/sowmyaparameshwara/passion/propertyFrontEnd1/index.html"+'?eraseCache=true';
+     window.location = "index.html"+'?eraseCache=true';
     document.getElementById("input1").style.display="block";
     document.getElementById("output1").style.display="none"; 
 }
