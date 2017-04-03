@@ -4,7 +4,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/
 jquery.min.js"></script>
       <script src="jquery.dynatable.js"></script>
-	 <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 <meta name="google-signin-client_id" content="1024116579945-tbtb0a0pdh6vnnrbr5rhkqcpfiuqqe0q.apps.googleusercontent.com">
     <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/jquery.dynatable.css" />
     <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/reset.css" />
@@ -24,15 +24,18 @@ jquery.min.js"></script>
 <body>
 <a href="#" onclick="signOut();">Sign out</a>
 <script>
-  function signOut() {
-     gapi.load('auth2', function() {
-     gapi.auth2.init();
-     var auth2 = gapi.auth2.getAuthInstance();
-     auth2.signOut().then(function () {
-     console.log('User signed out.');
-    });
-   });
-  }
+   function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+
+    function onLoad() {
+      gapi.load('auth2', function() {
+        gapi.auth2.init();
+      });
+    }
 </script>
 <div id="input1">
 <p>Please enter filter criteria : </p>
