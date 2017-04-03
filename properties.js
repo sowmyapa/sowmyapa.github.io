@@ -1,3 +1,10 @@
+$(document).ready(function(){
+    if (document.location.pathname == "filters.html") {
+       console.log(localStorage.getItem("userName"));
+    }
+});
+
+
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -11,12 +18,6 @@ function onSignIn(googleUser) {
   }  
 }
 
-
-$(document).ready(function(){
-    if (document.location.pathname == "filters.html") {
-       console.log(localStorage.getItem("userName"));
-    }
-});
 
 function UserAction() {
 //window.location.href="propertyList.html";
