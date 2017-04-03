@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    console.log("pathname"+document.location.pathname);
     if (document.location.pathname == "filters.html") {
        console.log(localStorage.getItem("userName"));
     }
@@ -13,6 +14,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   window.location.href="filters.html";
  if(typeof(Storage) !== "undefined") {
+   console.log("storing");
     // Store
     localStorage.setItem("userName", profile.getName());
   }  
