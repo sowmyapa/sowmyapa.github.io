@@ -3,27 +3,18 @@
 	<script type="text/javascript" src="properties.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/
 jquery.min.js"></script>
-      <script src="jquery.dynatable.js"></script>
 	 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <meta name="google-signin-client_id" content="1024116579945-tbtb0a0pdh6vnnrbr5rhkqcpfiuqqe0q.apps.googleusercontent.com">
-    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/jquery.dynatable.css" />
-    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/reset.css" />
     <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/bootstrap-2.3.2.min.css" />
-    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/application.css" />
-    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/project.css" />
-    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/pygments.css" />
-    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/share.css" />
-    <link href='//fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/dynatable-docs.css" />
-    <link rel="stylesheet" type="text/css"  href="dropdown.css" />
 
 </head>
 
 
 <body>
+<h1><b>Find your dream property</b></h1>
+<h2>Please Sign in via Google</h2>
 <div class="g-signin2" data-onsuccess="onSignIn()"></div>
-	<!--<script>
+	<script>
 	function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -32,7 +23,7 @@ jquery.min.js"></script>
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   window.location.href="filters.html" 
 }
-	</script>-->
+	</script>
 
 <a href="#" onclick="signOut();">Sign out</a>
 <script>
@@ -44,55 +35,5 @@ jquery.min.js"></script>
   }
 </script>
 	
-<div id="input1">
-<h1>Find your dream property</h1>
-<p>Please enter filter criteria : </p>
-
-<!--<div class="dropdown">
-  <br>
-   Property Type: <br>
-  <button onclick="myFunction()" id="dropBtnId" class="dropbtn"></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#Apartment">Apartment</a>
-    <a href="#Villa">Villa</a>
-  </div>
-</div>-->
-<form action='javascript:UserAction()'>
- Property Name: <br>
-<input type="text" id="propertyNameId" name="Property Name">
-<br>
-Property Price: <br>
-<input type="text" id="propertyPriceId" name="Property Price">
-<br>
-Property Size: <br>
-<input type="text" id="propertySizeId" name="Property Size">
-<br>
-Property Type: <br>
-<input type="text" id="propertyTypeId" name="Property Type">
-
-<br>
-Property Area: <br>
-<input type="text" id="propertyAreaId" name="Property Area">
-<br>
-<input type="submit" name="Search">
-</form>
-</div>
-<div hidden id="output1">
-<table id="table1" class="table table-striped" border="1" cellpadding="2">
-  <thead>
-        <th>Property Name</th>
-        <th>Property Address</th>
-        <th>Property Price</th>
-        <th>Property Size</th>
-        <th>Property Type</th>
-        <th>Property Area</th>
-        <th>Owner Name</th>
-        <th>Owner Email</th>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-<button onclick="goBack()">Go Back</button>
-</div>
 </body>
 </html>
