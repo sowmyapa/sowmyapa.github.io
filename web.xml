@@ -1,0 +1,4 @@
+<servlet-mapping>
+    <servlet-name>filters</servlet-name>
+    <url-pattern>/filters.html</url-pattern>
+</servlet-mapping>
