@@ -1,6 +1,7 @@
 $(document).ready(function(){
     console.log("pathname"+document.location.pathname);
-    if (document.location.pathname == "filters.html") {
+    if (document.location.pathname == "pathname/filters.html") {
+      $('#userId').innerHTML="Hello "+localStorage.getItem("userName");
        console.log(localStorage.getItem("userName"));
     }
 });
