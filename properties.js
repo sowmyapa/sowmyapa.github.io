@@ -60,7 +60,7 @@ totalRecordCount: 'totalRecordCount'
 }
 
 function goBack(){
-     window.location = "index.html"+'?eraseCache=true';
+     window.location = "filters.html"+'?eraseCache=true';
     document.getElementById("input1").style.display="block";
     document.getElementById("output1").style.display="none"; 
 }
