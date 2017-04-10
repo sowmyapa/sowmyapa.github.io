@@ -4,6 +4,7 @@ $(document).ready(function(){
        document.getElementById("userId").innerHTML="Hello "+(localStorage.getItem("userName"));
        document.getElementById("userProfile").src=localStorage.getItem("userPic");
        console.log(localStorage.getItem("userName"));
+       console.log(localStorage.getItem("userPic"));
     }
 });
 
