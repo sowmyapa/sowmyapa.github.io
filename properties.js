@@ -2,9 +2,10 @@ $(document).ready(function(){
     console.log("pathname"+document.location.pathname);
     if (document.location.pathname == "/filters.html") {
        document.getElementById("userId").innerHTML="Hello "+(localStorage.getItem("userName"));
-       document.getElementById("userProfile").src=localStorage.getItem("userPic");
-       console.log(localStorage.getItem("userName"));
+       console.log("in filters : "+localStorage.getItem("userName"));
        console.log(localStorage.getItem("userPic"));
+       console.log(document.getElementById("userProfile"));
+       document.getElementById("userProfile").src=localStorage.getItem("userPic");
     }
 });
 
