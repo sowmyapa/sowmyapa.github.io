@@ -2,6 +2,7 @@ $(document).ready(function(){
     console.log("pathname"+document.location.pathname);
     if (document.location.pathname == "/filters.html") {
        document.getElementById("userId").innerHTML="Hello "+(localStorage.getItem("userName"));
+       document.getElementById("userProfile").src=localStorage.getItem("userPic");
        console.log(localStorage.getItem("userName"));
     }
 });
@@ -18,6 +19,7 @@ function onSignIn(googleUser) {
    console.log("storing");
     // Store
     localStorage.setItem("userName", profile.getName());
+    localStorage.setItem("userPic", profile.getImageUrl());
   }  
 }
 
