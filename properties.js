@@ -75,6 +75,10 @@ record: null,
 queryRecordCount: 'queryRecordCount',
 totalRecordCount: 'totalRecordCount'
 }
+features: {
+    paginate: true,
+    search: true
+  }
 });
 }
 
